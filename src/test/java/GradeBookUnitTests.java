@@ -49,7 +49,7 @@ public class GradeBookUnitTests {
 
     @Test
     void shouldCreateGradeBook() {
-        Map<String, int[]> gradeBook = new HashMap<String, int[]>();
+        Map<String, int[]> gradeBook = new HashMap<>();
         Assertions.assertNotNull(gradeBook);
     }
 
