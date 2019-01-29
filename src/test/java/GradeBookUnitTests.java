@@ -32,6 +32,16 @@ public class GradeBookUnitTests {
     }
 
     @Test
+    void shouldNotCreateSubjectWithMarksLesserThan1() {
+
+    }
+
+    @Test
+    void shouldCreateSubjectWithMarksBetween1and5() {
+
+    }
+
+    @Test
     void shouldAddMarkToSubject() {
         subject.addSubjectMarks(new int[]{3,4,1});
         Assertions.assertEquals(subject,subject);
@@ -49,7 +59,7 @@ public class GradeBookUnitTests {
 
     @Test
     void shouldCreateGradeBook() {
-        Map<String, int[]> gradeBook = new HashMap<>();
+        Map<String, String> gradeBook = new HashMap<>();
         Assertions.assertNotNull(gradeBook);
     }
 

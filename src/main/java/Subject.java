@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Arrays;
 
 public class Subject {
@@ -24,6 +25,22 @@ public class Subject {
     public Subject(String subjectName, int[] subjectMarks) {
         this(subjectName);
         this.subjectMarks = subjectMarks;
+    }
+
+    public double calculateAverage(Subject subject) {
+        double average = 0.0d;
+        if (subject.getSubjectMarks() != null) {
+            int[] marksArray = subject.getSubjectMarks();
+            int marksSum = 0;
+            for (int i = 0; i < marksArray.length; i++) {
+                int value = marksArray[i];
+                marksSum = marksSum + value;
+            }
+            average = (float) marksSum / marksArray.length;
+        } else {
+            System.out.println("No values to calculate");
+        }
+        return Math.round(average*100)/100.0d;
     }
 
     @Override
