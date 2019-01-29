@@ -25,13 +25,12 @@ public class DemoGradeBook {
         grades.put("Norwegian Language", "[3, 5, 5, 4, 3]");
         grades.put(subject2.getSubjectName(), "[0]");
 
+        GradeBook gradeBook = new GradeBook();
         System.out.println("\nGrade Book: ");
-        System.out.println(grades);
+        gradeBook.allSubjectsAndMarks(grades);
 
         System.out.println("\nSubjects from Grade Book: " + grades.keySet());
-
-        System.out.println("\nValues from Grade Book: ");
-        System.out.println(grades.values());
+        System.out.println("\nValues from Grade Book: " + grades.values());
 
 
 
