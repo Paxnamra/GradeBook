@@ -1,34 +1,16 @@
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class GradeBook {
 
-    //private Subject key;
-    //private Subject value;
-    //private Map<String, String> grades;
-
-    /*
-    GradeBook() {
-        new HashMap<String, String>();
-    }
-    */
-
-    public void allSubjectsAndMarks(Map grades) {
-        Iterator<Map.Entry<String, String>> entries = grades.entrySet().iterator();
+    public void allSubjectsAndMarks(Map map) {
+        Iterator<Map.Entry<String, List<Integer>>> entries = map.entrySet().iterator();
         while (entries.hasNext()) {
-            Map.Entry<String, String> entry = entries.next();
+            Map.Entry<String, List<Integer>> entry = entries.next();
             System.out.println("Subject: " + entry.getKey() + " || Marks: " + entry.getValue());
         }
     }
 
-    public double calculateGradeBookAverage(Map grades) {
+    public double calculateGradeBookAverage(Map map) {
         return 0.0d;
     }
-
-    public void put(Subject key, Subject value) {
-        //grades.put(key.getSubjectName(), Arrays.toString(value.getSubjectMarks()));
-    }
 }
-
