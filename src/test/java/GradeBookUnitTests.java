@@ -3,16 +3,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import java.util.HashMap;
-import java.util.Map;
+
+import java.util.*;
 
 @ExtendWith(MockitoExtension.class)
 public class GradeBookUnitTests {
 
     @Mock
     Subject subject;
-    int[] marks;
-    Map<String,int[]> gradeBook;
+    List<Integer> subjectMarks;
 
     @Test
     void shouldCreateOnlySubject() {
@@ -22,7 +21,7 @@ public class GradeBookUnitTests {
 
     @Test
     void shouldCreateSubjectWithMark() {
-        Subject subject = new Subject("Physics", new int[]{3,5,1,4});
+        Subject subject = new Subject("Physics", new ArrayList<>(Arrays.asList(5, 3, 1, 5, 4)));
         Assertions.assertNotNull(subject);
     }
 
@@ -43,7 +42,7 @@ public class GradeBookUnitTests {
 
     @Test
     void shouldAddMarkToSubject() {
-        subject.addSubjectMarks(new int[]{3,4,1});
+        subject.addSubjectMarks(new ArrayList<>(Arrays.asList(5, 3, 1, 5, 4)));
         Assertions.assertEquals(subject,subject);
     }
 

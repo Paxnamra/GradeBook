@@ -1,8 +1,9 @@
 import java.util.*;
+import java.util.stream.Stream;
 
 public class GradeBook {
 
-    public void allSubjectsAndMarks(Map map) {
+    public void showAllSubjectsAndMarks(Map map) {
         Iterator<Map.Entry<String, List<Integer>>> entries = map.entrySet().iterator();
         while (entries.hasNext()) {
             Map.Entry<String, List<Integer>> entry = entries.next();
@@ -10,7 +11,11 @@ public class GradeBook {
         }
     }
 
-    public double calculateGradeBookAverage(Map map) {
-        return 0.0d;
+    public void calculateGradeBookAverage(Map map) {
+        Iterator<List<Integer>> values = map.values().iterator();
+        while (values.hasNext()) {
+            List<Integer> value = values.next();
+            System.out.println("Values are: " + value.toString());
+        }
     }
 }

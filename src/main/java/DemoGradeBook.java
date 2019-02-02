@@ -14,7 +14,7 @@ public class DemoGradeBook {
 
         System.out.println("\n" + subject1 + " average: " + subject1.calculateAverage(subject1.getSubjectMarks()));
         System.out.println();
-        //System.out.println( subject2 + " average: " + subject2.calculateAverage(subject2.getSubjectMarks())); <-- not handled NullPointerException
+        System.out.println( subject2 + " average: " + subject2.calculateAverage(subject2.getSubjectMarks()));
 
         Map<String, List<Integer>> grades = new HashMap<>();
         grades.put(subject1.getSubjectName(),subject1.getSubjectMarks());
@@ -27,10 +27,13 @@ public class DemoGradeBook {
         //GradeBook gradeList = new GradeBook(new HashMap<String, List<Subject>>());
         //gradeList.calculateGradeBookAverage(grades);
         System.out.println("\nGrade Book: ");
-        gradeBook.allSubjectsAndMarks(grades);
+        gradeBook.showAllSubjectsAndMarks(grades);
+        gradeBook.calculateGradeBookAverage(grades);
 
         System.out.println("\nSubjects from Grade Book: " + grades.keySet());
         System.out.println("\nValues from Grade Book: " + grades.values());
+
+
 
 
     }

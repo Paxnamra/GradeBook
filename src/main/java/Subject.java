@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.List;
 
 public class Subject {
@@ -30,12 +29,17 @@ public class Subject {
     public double calculateAverage(List<Integer> marks) {
         double average = 0.0d;
         Integer sum = 0;
-        if (!marks.isEmpty()) {
-            for (Integer mark : marks) {
-                sum = sum + mark;
+
+        try {
+            if (!marks.isEmpty()) {
+                for (Integer mark : marks) {
+                    sum = sum + mark;
+                }
+                average = (float) sum / marks.size();
+            } else {
+                throw new NullPointerException();
             }
-            average = (float) sum / marks.size();
-        } else {
+        } catch (java.lang.NullPointerException nPointer) {
             System.out.println("No values to calculate");
         }
         return Math.round(average * 100) / 100.0d;
