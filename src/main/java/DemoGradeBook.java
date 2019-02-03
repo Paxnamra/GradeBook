@@ -23,12 +23,10 @@ public class DemoGradeBook {
         grades.put(subject2.getSubjectName(), new ArrayList<>(Arrays.asList(0)));
 
 
-        GradeBook gradeBook = new GradeBook();
-        //GradeBook gradeList = new GradeBook(new HashMap<String, List<Subject>>());
-        //gradeList.calculateGradeBookAverage(grades);
+        Calculations calculations = new Calculations();
         System.out.println("\nGrade Book: ");
-        gradeBook.showAllSubjectsAndMarks(grades);
-        gradeBook.calculateGradeBookAverage(grades);
+        calculations.showAllSubjectsAndMarks(grades);
+        calculations.calculateGradeBookAverage(grades);
 
         System.out.println("\nSubjects from Grade Book: " + grades.keySet());
         System.out.println("\nValues from Grade Book: " + grades.values());

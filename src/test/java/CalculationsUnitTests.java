@@ -7,7 +7,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.*;
 
 @ExtendWith(MockitoExtension.class)
-public class GradeBookUnitTests {
+public class CalculationsUnitTests {
 
     @Mock
     Subject subject;
