@@ -1,6 +1,7 @@
 import java.util.List;
+import java.lang.NullPointerException;
 
-public class Subject extends Calculations {
+public class Subject {
 
     private String subjectName;
     private List<Integer> subjectMarks;
@@ -26,11 +27,27 @@ public class Subject extends Calculations {
         this.subjectMarks = subjectMarks;
     }
 
+    public double calculateAverage(List<Integer> marks) {
+        double average = 0.0d;
+        Integer sum = 0;
+
+        try {
+            if (!marks.isEmpty()) {
+                for (Integer mark : marks) {
+                    sum = sum + mark;
+                }
+                average = (float) sum / marks.size();
+            } else {
+                throw new NullPointerException();
+            }
+        } catch (NullPointerException nPointer) {
+            System.out.println("No values to calculate");
+        }
+        return Math.round(average * 100) / 100.0d;
+    }
+
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder();
-        sb.append("subjectName='").append(subjectName).append('\'');
-        sb.append(", subjectMarks=").append(subjectMarks);
-        return sb.toString();
+        return subjectName + subjectMarks;
     }
 }
