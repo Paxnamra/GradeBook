@@ -3,6 +3,8 @@ import java.util.*;
 public class DemoGradeBook {
     public static void main(String[] args) {
 
+        GUIPanel guiPanel = new GUIPanel();
+
         System.out.println("Printing singular subjects: ");
 
         Subject subject = new Subject("Mathematics");

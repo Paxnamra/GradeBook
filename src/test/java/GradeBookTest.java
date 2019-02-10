@@ -1,18 +1,16 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class CalculationsTest {
+class GradeBookTest {
 
     @Test
-    void shouldCalculateAverage() {
+    void shouldGetGradeBookExample() {
         //given
         //when
         //then
     }
 
     @Test
-    void shouldShowAllSubjectsAndMarks() {
+    void shouldDisplayAllSubjectsAndMarks() {
         //given
         //when
         //then

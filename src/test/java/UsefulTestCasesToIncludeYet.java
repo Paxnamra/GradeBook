@@ -11,6 +11,7 @@ public class UsefulTestCasesToIncludeYet {
 
     @Mock
     Subject subject;
+    GradeBook gradeBook = new GradeBook();
     List<Integer> subjectMarks;
 
     @Test
@@ -58,8 +59,8 @@ public class UsefulTestCasesToIncludeYet {
 
     @Test
     void shouldCreateGradeBook() {
-        Map<String, String> gradeBook = new HashMap<>();
-        Assertions.assertNotNull(gradeBook);
+        Map<String, Subject> grades = gradeBook.getGradeBookExample();
+        Assertions.assertNotNull(grades);
     }
 
     @Test
